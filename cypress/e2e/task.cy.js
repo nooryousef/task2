@@ -3,11 +3,13 @@
 describe('assignment', () => {
   // let array=[]
   // let arrayold=[]
-  let sumnew=0
-  let sumold=0
+ 
     it('summation', () => {
+
+      
       cy.visit('https://www.automationteststore.com/')
-  
+   let sumnew=0
+  let sumold=0
       cy.get('#special > .container-fluid').find('.pricenew').each(($new_price) => {
   
   
@@ -40,10 +42,11 @@ describe('assignment', () => {
         
        cy.log(sumold)
   
-       alert(` the old price is $${sumold} and new price is $${sumnew}`)
   
   
-       })
+       }).then(() => {
+        alert(`Hey, the sum of the old prices is $${sumold}, and the sum of the new prices is $${sumnew}`)
+      });
   
     });
   });
